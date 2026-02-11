@@ -18,51 +18,97 @@
     <!-- Header -->
     <header class="flex justify-between items-center bg-[#FB6F92] p-4">
       <!-- Left Icon -->
-      <i class="fa-solid fa-bars fa-2x cursor-pointer" style="color: #831843;"></i>
+      <i
+        class="fa-solid fa-bars fa-2x cursor-pointer"
+        style="color: #831843"
+      ></i>
 
       <!-- Right Icon -->
       <div class="flex gap-4">
-        <i class="fa-solid fa-bell fa-2x cursor-pointer" style="color: #831843;"></i>
+        <i
+          class="fa-solid fa-bell fa-2x cursor-pointer"
+          style="color: #831843"
+        ></i>
       </div>
     </header>
 
-    <main class="p-4 mb-20 flex justify-center">
-  
+    <main class="p-4 mb-20 flex justify-center flex-col items-center gap-20">
+      <div
+        class="bg-pink-100 p-8 rounded-3xl shadow-lg flex flex-col items-center w-64"
+      >
+        <!-- Title -->
+        <h1 class="text-gray-700 text-lg font-semibold mb-2">Pomodoro Timer</h1>
+        <p class="text-gray-500 text-sm mb-6">Rester concentré et productif</p>
 
- <div class="bg-pink-100 p-8 rounded-3xl shadow-lg flex flex-col items-center w-64">
-    <!-- Title -->
-    <h1 class="text-gray-700 text-lg font-semibold mb-2">Pomodoro Timer</h1>
-    <p class="text-gray-500 text-sm mb-6">Rester concentré et productif</p>
+        <!-- Timer Display -->
+        <div id="timerDisplay" class="text-pink-600 text-5xl font-bold mb-6">
+          25:00
+        </div>
 
-    <!-- Timer Display -->
-    <div id="timerDisplay" class="text-pink-600 text-5xl font-bold mb-6">25:00</div>
+        <!-- Buttons -->
+        <div class="flex gap-8">
+          <button
+            id="resetBtn"
+            class="w-12 h-12 rounded-full bg-[#E9B4B4] flex items-center justify-center hover:bg-pink-300 transition"
+          >
+            <i class="fa-solid fa-pause fa-2x" style="color: #ffffff"></i>
+          </button>
+          <button
+            id="pauseBtn"
+            class="w-12 h-12 rounded-full bg-[#E9B4B4] flex items-center justify-center hover:bg-pink-300 transition"
+          >
+            <i
+              class="fa-solid fa-arrow-rotate-right fa-2x"
+              style="color: #ffffff"
+            ></i>
+          </button>
+        </div>
+      </div>
 
-    <!-- Buttons -->
-    <div class="flex gap-8">
-      <button id="resetBtn" class="w-12 h-12 rounded-full bg-[#E9B4B4] flex items-center justify-center hover:bg-pink-300 transition">
-        <i class="fa-solid fa-pause fa-2x" style="color:#ffffff"></i>
-      </button>
+      <div>
+      <!--div taches-->
+      <div>
+        <form class="flex gap-2">
+          <input
+          type="text"
+      placeholder="Ajouter nouvelle tâche..."
+      class="flex-1 p-3 rounded-full border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300"
+    />
+
     <button 
-  id="pauseBtn" 
-  class="w-12 h-12 rounded-full bg-[#E9B4B4] flex items-center justify-center hover:bg-pink-300 transition"
->
-  <i class="fa-solid fa-arrow-rotate-right fa-2x " style="color:#ffffff"></i>
-</button>
-    </div>
-  </div>
+      type="submit"
+      class="px-5 py-3 bg-pink-400 text-white rounded-full hover:bg-pink-500 transition"
+    >
+      Ajouter
+    </button>
+  </form>
+</div>
 
 
 
+      </div>
     </main>
 
     <!-- Footer / Navigation -->
     <footer
       class="fixed bottom-0 left-0 w-full flex justify-around items-center bg-[#FB6F92] h-16 lg:justify-center lg:gap-20 lg:flex"
     >
-<i class="fa-solid fa-house-chimney cursor-pointer fa-2x" style="color: #831843;"></i>
-      <i class="fa-solid fa-list cursor-pointer fa-2x" style="color: #831843"></i>
-      <i class="fa-regular cursor-pointer fa-clock fa-2x" style="color: #831843"></i>
-      <i class="fa-regular cursor-pointer fa-user fa-2x" style="color: #831843;"></i>
+      <i
+        class="fa-solid fa-house-chimney cursor-pointer fa-2x"
+        style="color: #831843"
+      ></i>
+      <i
+        class="fa-solid fa-list cursor-pointer fa-2x"
+        style="color: #831843"
+      ></i>
+      <i
+        class="fa-regular cursor-pointer fa-clock fa-2x"
+        style="color: #831843"
+      ></i>
+      <i
+        class="fa-regular cursor-pointer fa-user fa-2x"
+        style="color: #831843"
+      ></i>
     </footer>
     <script type="module" src="app.js"></script>
   </body>
