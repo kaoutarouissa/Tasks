@@ -1,3 +1,4 @@
+import { afficherTask } from "./ui.js";
 export function todo(){
     const btn=document.getElementById("btnAjouter")
     const form=document.getElementById("forminput")
@@ -13,13 +14,27 @@ msg.classList.add("hidden"); //ne pas afficher le msg vide
   alert("La tâche doit contenir selement des lettres et ne pas commencer par espace ");
   return;
 }
-    const taskAjoute=document.createElement("div")
-    taskAjoute.className="bg-pink-100 text-gray-700 min-w-0 m-6 text-lg font-semibold p-4 rounded-2xl shadow-md flex justify-between items-start mb-2w-full md:w-3/4 lg:w-1/2mx-auto break-words";
-    // const taskValeur=form.value
-    taskAjoute.textContent=taskValeur
-    taskList.appendChild(taskAjoute)
+
+   afficherTask(taskValeur, taskList);
     form.value="";
 
-})}
+})
+//hna anlhdem ela btn sup and done
+taskList.addEventListener("click", function(e){
+
+  // pour supp btn
+  if(e.target.classList.contains("deleteBtn")){ //e event etarget :elm li click 3lih qui contien deletbtn
+    e.target.closest("div").parentElement.remove(); // closet: a9rab parent l selector div
+  }
+
+  // btn done
+  if(e.target.classList.contains("doneBtn")){
+    const task = e.target.closest("div").parentElement;
+    task.classList.toggle("line-through");//presq dayra fhal add ghir hiya kadir switsh
+    task.classList.toggle("opacity-50");
+  }
+
+});
+}
 
 
