@@ -68,11 +68,11 @@
       <div>
       <!--div taches-->
       <div>
-        <form id="forminput" class="flex gap-2">
-          <input
+        <form  class="flex gap-2">
+          <input id="forminput" 
           type="text"
       placeholder="Ajouter nouvelle tâche..."
-      class="flex-1 p-3 rounded-full border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300"
+      class="flex-1 p-3 rounded-full border  border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300"
     />
 
     <button id="btnAjouter"
@@ -87,7 +87,11 @@
 
 
       </div>
-      <div id="taskList"></div>
+      <div id="taskList">
+        <p id="emptyMessage" class="text-gray-500 text-center ">
+  Ta liste est vide 💪
+</p>
+      </div>
     </main>
 
     <!-- Footer / Navigation -->
